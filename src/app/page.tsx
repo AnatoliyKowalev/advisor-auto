@@ -7,6 +7,7 @@ import VideosPreview from "@/components/home-page/videos-preview";
 import TelegramBlock from "@/components/home-page/telegram-block";
 import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
 import Faq from "@/components/home-page/faq";
+import Feedbacks from "@/components/home-page/feedbacks";
 
 const Page: FC = () => {
   return (
@@ -19,6 +20,7 @@ const Page: FC = () => {
       <VideosPreview />
       <YoutubeSubscribe />
       <Faq />
+      <Feedbacks />
       {/* <div
         style={{
           height: "100vh",

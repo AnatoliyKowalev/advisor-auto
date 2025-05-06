@@ -25,7 +25,7 @@ const CarsSouthKorea: FC = () => {
           className="w-full flex flex-col gap-8"
         >
           <AccordionItem value="pros">
-            <AccordionTrigger className="flex items-center text-2xl bg-primary text-white hover:no-underline [&>svg]:text-white px-6 cursor-pointer">
+            <AccordionTrigger className="bg-primary text-white [&>svg]:text-white">
               Плюси імпорту автомобілів з Південної Кореї
             </AccordionTrigger>
             <AccordionContent>
@@ -43,14 +43,14 @@ const CarsSouthKorea: FC = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="cons">
-            <AccordionTrigger className="flex items-center text-2xl bg-muted-foreground text-white hover:no-underline [&>svg]:text-white px-6 cursor-pointer">
+            <AccordionTrigger className="bg-muted-foreground text-white [&>svg]:text-white">
               Мінуси напрямку
             </AccordionTrigger>
             <AccordionContent>
               <ul className="py-4 flex flex-col gap-2">
                 {cons.map((option, idx) => (
                   <li
-                    className="flex items-center gap-4 text-2xl"
+                    className="flex items-center gap-4 text-xl"
                     key={`cons-${idx}`}
                   >
                     <Minus className="text-muted-foreground min-w-[24px]" />

@@ -6,6 +6,7 @@ import ParalaxHyunday from "@/components/home-page/paralax-hyunday";
 import VideosPreview from "@/components/home-page/videos-preview";
 import TelegramBlock from "@/components/home-page/telegram-block";
 import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
+import Faq from "@/components/home-page/faq";
 
 const Page: FC = () => {
   return (
@@ -17,6 +18,7 @@ const Page: FC = () => {
       <TelegramBlock />
       <VideosPreview />
       <YoutubeSubscribe />
+      <Faq />
       {/* <div
         style={{
           height: "100vh",

@@ -5,18 +5,30 @@ import SectionTitle from "@/components/shared/section-title";
 import SubTitle from "@/components/shared/sub-title";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Feedbacks: FC = () => {
   return (
-    <section>
+    <section className="container mx-auto">
       <SectionTitle>Відгуки клієнтів та кейси імпорту</SectionTitle>
       <SubTitle>300+ реальних відгуків</SubTitle>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 place-items-center">
+      {/* <div className="grid grid-cols-1 md:grid-cols-12 gap-4 place-items-center">
         {feedbacks.map((review) => (
           <ReviewCard {...review} key={review.user} />
         ))}
-      </div>
-      <Button className="mt-10" size="lg" asChild>
+      </div> */}
+      <Carousel className="w-full">
+        <CarouselContent className="-ml-1 pb-8">
+          {feedbacks.map((review,) => (
+            <CarouselItem className="px-4 md:basis-1/2 lg:basis-1/3" key={review.user}>
+              <ReviewCard {...review} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <Button className="mt-4" size="lg" asChild>
         <Link
           href={`https://www.google.com/maps/place/ADVISOR+AUTO/@50.3957107,30.5014269,0a,80y,90t/data=!3m7!1e2!3m5!1sAF1QipM1KaESa840f05vvJ0T_td5mNrlmxjs_AXmI06H!2e10!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipM1KaESa840f05vvJ0T_td5mNrlmxjs_AXmI06H%3Dw150-h150-k-no-p!7i1280!8i721!4m8!3m7!1s0x40d4ce8176055555:0x4f52fd13766d5ce6!8m2!3d50.3957107!4d30.5014269!9m1!1b1!16s%2Fg%2F11gfp7jrmv?entry=ttu`}
           className="mx-auto"

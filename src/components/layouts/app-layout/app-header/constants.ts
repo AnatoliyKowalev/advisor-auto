@@ -1,0 +1,24 @@
+import { Blocks, Home, Radar } from "lucide-react";
+
+export const mainMenu = [
+  {
+    title: "Авто з Південної Кореї",
+    url: "#cars-south-korea",
+  },
+  {
+    title: "FAQ",
+    url: "#faq",
+  },
+  {
+    title: "Ціни та відгуки",
+    url: "#reviews-cases",
+  },
+  {
+    title: "Advisor Family",
+    url: "#advisor-family",
+  },
+  {
+    title: "Про нас",
+    url: "#about",
+  },
+];

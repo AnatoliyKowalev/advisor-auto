@@ -4,6 +4,8 @@ import React, { FC } from "react";
 import GetFilesBlock from "@/components/home-page/get-files-block";
 import ParalaxHyunday from "@/components/home-page/paralax-hyunday";
 import VideosPreview from "@/components/home-page/videos-preview";
+import TelegramBlock from "@/components/home-page/telegram-block";
+import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
 
 const Page: FC = () => {
   return (
@@ -12,7 +14,9 @@ const Page: FC = () => {
       <CarsSouthKorea />
       <ParalaxHyunday />
       <GetFilesBlock />
+      <TelegramBlock />
       <VideosPreview />
+      <YoutubeSubscribe />
       {/* <div
         style={{
           height: "100vh",

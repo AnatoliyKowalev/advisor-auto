@@ -6,6 +6,8 @@ import NavMain from "./nav-main";
 import { cn } from "@/lib/utils";
 import ContactSubHeader from "../contact-sub-header";
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
+import BurgerMenu from "./burder-menu";
 
 const AppHeader: FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -14,7 +16,6 @@ const AppHeader: FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // const header = document.getElementById('header');
       if (window.scrollY > 0) {
         setIsSticky(true);
       } else {
@@ -27,7 +28,7 @@ const AppHeader: FC = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 w-full flex flex-col z-[99]">
+    <div className="fixed top-0 w-full flex flex-col z-[10]">
       <ContactSubHeader />
       <header
         className={cn("bg-card transition-shadow duration-300", {
@@ -35,15 +36,19 @@ const AppHeader: FC = () => {
         })}
         ref={headerRef}
       >
-        <div className="container mx-auto flex justify-between py-4 w-full items-center">
+        <div className="container mx-auto flex justify-start md:justify-between py-4 w-full items-center">
           <Image
             src="svg/advisor-auto-logo.svg"
             width={155}
             height={50}
             alt="company logo"
           />
-          <NavMain />
-          <Button size="lg">Консультація</Button>
+          <NavMain className="hidden lg:block ml-auto" />
+          <Button className="ml-auto mr-2 md:m-none" size="lg">
+            <Phone className="block md:hidden" />
+            <span className="hidden md:block">Консультація</span>
+          </Button>
+          <BurgerMenu />
         </div>
       </header>
     </div>

@@ -17,7 +17,7 @@ const ContactSubHeader: FC = () => {
           </a>
           <a
             href="mailto:manageradvisorauto@gmail.com"
-            className="flex items-center gap-2 hover:underline"
+            className="items-center gap-2 hover:underline hidden md:flex"
           >
             <Mail className="h-4 w-4" />
             manageradvisorauto@gmail.com

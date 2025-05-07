@@ -16,9 +16,13 @@ const Faq: FC = () => {
       <SectionTitle>Питання та відповіді</SectionTitle>
       <SubTitle>Знайдіть відповіді на ваші запитання</SubTitle>
       <Tabs defaultValue="korea" className="w-full">
-        <TabsList className="mx-auto">
-          <TabsTrigger value="korea">Імпорт авто з Південної Кореї</TabsTrigger>
-          <TabsTrigger value="europe">Імпорт авто з Європи</TabsTrigger>
+        <TabsList className="mx-auto flex-col md:flex-row">
+          <TabsTrigger className="w-full" value="korea">
+            Імпорт авто з Південної Кореї
+          </TabsTrigger>
+          <TabsTrigger className="w-full" value="europe">
+            Імпорт авто з Європи
+          </TabsTrigger>
         </TabsList>
         {Object.entries(tabs).map((tab) => (
           <TabsContent value={tab[0]} key={tab[0]}>

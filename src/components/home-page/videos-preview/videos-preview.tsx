@@ -22,7 +22,7 @@ const VideosPreview: FC = () => {
         />
         Більше відео на нашому каналі
       </a>
-      <div className="mt-[120px] grid grid-cols-1 gap-x-8 md:grid-cols-12">
+      <div className="mt-[120px] grid grid-cols-1 gap-8 md:grid-cols-12">
         {videos.map((video) => (
           <VideoCard {...video} key={video.title} />
         ))}

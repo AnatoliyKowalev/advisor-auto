@@ -5,7 +5,7 @@ import React, { FC } from "react";
 
 const GetFilesBlock: FC = () => {
   return (
-    <div className="container mx-auto flex grid place-items-center grid-cols-1 md:grid-cols-12 h-screen">
+    <div className="container mx-auto flex grid place-items-center grid-cols-1 md:grid-cols-12 h-screen py-20 md:py-0">
       <div className="flex flex-col md:col-span-7 w-full">
         <Image
           src="/img/hyundai-santa-fe.png"

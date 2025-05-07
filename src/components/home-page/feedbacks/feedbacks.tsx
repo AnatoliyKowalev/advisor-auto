@@ -8,11 +8,11 @@ import { Button } from "@/components/ui/button";
 
 const Feedbacks: FC = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto" id="reviews-cases">
       <SectionTitle>Відгуки клієнтів та кейси імпорту</SectionTitle>
       <SubTitle>300+ реальних відгуків</SubTitle>
       {/* <div className="overflow-x-auto md:overflow-x-visible md:grid md:grid-cols-1 gap-4 md:grid-cols-12 snap-x snap-mandatory scroll-smooth touch-pan-x"> */}
-      <div className="grid gap-4 overflow-x-auto sm:grid-cols-4 grid-flow-col auto-cols-[minmax(90%,_1fr)] md:auto-cols-auto md:grid-flow-row md:overflow-x-visible md:grid-cols-1 md:grid-cols-12 snap-x snap-mandatory scroll-smooth touch-pan-x p-4 ">
+      <div className="grid gap-4 overflow-x-auto sm:grid-cols-4 grid-flow-col auto-cols-[minmax(90%,_1fr)] md:auto-cols-auto md:grid-flow-row md:overflow-x-visible md:grid-cols-1 md:grid-cols-12 snap-x snap-mandatory scroll-smooth p-4 ">
         {feedbacks.map((review) => (
           <ReviewCard {...review} key={review.user} />
         ))}

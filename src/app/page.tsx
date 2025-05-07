@@ -14,17 +14,17 @@ import Team from "@/components/home-page/team";
 const Page: FC = () => {
   return (
     <>
-      {/* <MainBanner /> */}
-      {/* <CarsSouthKorea /> */}
-      {/* <ParalaxHyunday /> */}
-      {/* <GetFilesBlock /> */}
-      {/* <TelegramBlock /> */}
-      {/* <VideosPreview /> */}
-      {/* <YoutubeSubscribe /> */}
-      {/* <Faq /> */}
-      {/* <Feedbacks /> */}
-      {/* <AdvisorFamilyCard /> */}
-      {/* <Team /> */}
+      <MainBanner />
+      <CarsSouthKorea />
+      <ParalaxHyunday />
+      <GetFilesBlock />
+      <TelegramBlock />
+      <VideosPreview />
+      <YoutubeSubscribe />
+      <Faq />
+      <Feedbacks />
+      <AdvisorFamilyCard />
+      <Team />
     </>
   );
 };

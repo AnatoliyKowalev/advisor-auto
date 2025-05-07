@@ -2,12 +2,18 @@ import React, { FC, useState } from "react";
 import ReactPlayer from "react-player";
 import { YoutubeVideoProps } from "./interfaces";
 import CustomIcon from "../custom-icon";
+import { cn } from "@/lib/utils";
 
-const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video }) => {
+const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video, className }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="rounded-[4px] bg-secondary relative w-full max-w-4xl mx-auto aspect-video overflow-hidden shadow-[0_5px_25px_rgba(0,0,0,0.65)] flex items-center justify-center [&>div]:!w-full [&>div]:!h-full">
+    <div
+      className={cn(
+        "rounded-[4px] bg-secondary relative w-full max-w-4xl mx-auto aspect-video overflow-hidden shadow-[0_5px_25px_rgba(0,0,0,0.65)] flex items-center justify-center [&>div]:!w-full [&>div]:!h-full",
+        className
+      )}
+    >
       {isActive ? (
         <ReactPlayer
           url={video}

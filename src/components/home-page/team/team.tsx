@@ -5,7 +5,7 @@ import TeammateCard from "./teammate-card";
 
 const Team: FC = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto" id="about">
       <SectionTitle>Команда AdvisorAuto</SectionTitle>
       <div className="flex flex-wrap justify-center gap-4 mt-[100px]">
         {team.map((user) => (

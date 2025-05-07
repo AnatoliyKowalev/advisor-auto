@@ -8,7 +8,7 @@ import "./style.css";
 
 const AdvisorFamilyCard: FC = () => {
   return (
-    <section className="bg-muted">
+    <section className="bg-muted" id="advisor-family">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
         <Image
           src="/img/family-card.webp"
@@ -27,65 +27,9 @@ const AdvisorFamilyCard: FC = () => {
             акредитованих партнерів: АЗС, СТО, мийки, сервіси з послуг установки
             систем захисту, купівлі шин з приємними знижками.
           </p>
-          {/* <div className="logos">
-            <div className="logos-slide">
-              {brands.map((brand) => (
-                <div className="gg" key={brand.name}>
-                  <Image
-                    src={brand.src}
-                    className="h-[50px] mx-[40px]"
-                    width={200}
-                    height={150}
-                    alt={brand.name}
-                  />
-                </div>
-              ))}
-            </div>
-            <div className="logos-slide">
-              {brands.map((brand) => (
-                <div className="gg" key={brand.name}>
-                  <Image
-                    src={brand.src}
-                    // className="h-[50px] mx-[40px]"
-                    width={200}
-                    height={150}
-                    alt={brand.name}
-                  />
-                </div>
-              ))}
-            </div>
-          </div> */}
-          <div className="logos w-full mt-[100px] overflow-hidden whitespace-nowrap relative group">
+          <div className="logos w-full mt-[3rem] md:mt-[5rem] overflow-hidden whitespace-nowrap relative group">
             <LogosSlide />
             <LogosSlide aria-hidden />
-            {/* <div className="logos-slide">
-              <Image
-                src={"/svg/wog.svg"}
-                width={200}
-                height={150}
-                alt={"brand.name"}
-              />
-              <Image
-                src={"/svg/wog.svg"}
-                width={200}
-                height={150}
-                alt={"brand.name"}
-              />{" "}
-            </div>{" "}
-            <div aria-hidden className="logos-slide">
-              <Image
-                src={"/svg/wog.svg"}
-                width={200}
-                height={150}
-                alt={"brand.name"}
-              />
-              <Image
-                src={"/svg/wog.svg"}
-                width={200}
-                height={150}
-                alt={"brand.name"}
-              />{" "}
-            </div> */}
           </div>
         </div>
       </div>

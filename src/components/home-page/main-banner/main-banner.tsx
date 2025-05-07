@@ -13,7 +13,7 @@ const MainBanner: FC = () => {
           Імпорт авто з Південної Кореї та Європи
         </h1>
         <div
-          className="flex items-center gap-4 cursor-pointer group"
+          className="flex items-center justify-center md:justify-start gap-4 cursor-pointer group"
           role="button"
         >
           <PlayCircleIcon className="rounded-full w-12 h-12 text-primary transition-shadow duration-300 group-hover:shadow-[0_0_15px_#a6f4c5]" />
@@ -23,7 +23,7 @@ const MainBanner: FC = () => {
       <div className="flex flex-col md:col-span-6">
         <Image
           src="/img/kia.png"
-          className="absolute left-1/2 transform -translate-x-1/3 translate-y-1/5 pointer-events-none"
+          className="md:absolute md:left-1/2 transform md:-translate-x-1/3 md:translate-y-1/5 pointer-events-none"
           alt="white kia car"
           width={1200}
           height={1000}

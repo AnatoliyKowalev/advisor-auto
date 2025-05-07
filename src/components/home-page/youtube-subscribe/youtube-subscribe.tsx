@@ -4,14 +4,14 @@ import React, { FC } from "react";
 const YoutubeSubscribe: FC = () => {
   return (
     <div className="bg-[#0E0F19] h-fit">
-      <div className="container mx-auto flex text-white py-16">
-        <div className="flex-2 text-[42px] leading-[50px]">
+      <div className="container mx-auto flex flex-wrap md:flex-nowrap text-white py-16 gap-10 md:gap-0">
+        <div className="md:flex-2 text-[1.5rem] md:text-[3rem] leading-[1.5rem]md:leading-[3rem] text-center md:text-left">
           Підпишіться на наш{" "}
           <span className="text-destructive">Youtube-канал</span> та
           дізнавайтесь про авто, які ми можемо якісно підібрати та вигідно
           придбати для вас.
         </div>
-        <div className="flex-1 flex flex-col items-center justify-center text-lg gap-8 text-center">
+        <div className="md:flex-1 flex flex-col items-center justify-center text-lg gap-8 text-center">
           Не забудьте натиснути дзвіночок щоб не пропустити нове відео
           <a
             href="https://www.youtube.com/@ADVISORAUTO"

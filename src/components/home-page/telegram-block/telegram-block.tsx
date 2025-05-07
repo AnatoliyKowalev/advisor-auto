@@ -35,9 +35,9 @@ const TelegramBlock: FC = () => {
   }, []);
 
   return (
-    <div className="flex h-[50vh] bg-muted">
-      <div className="container mx-auto flex">
-        <div className="flex flex-col justify-center gap-8 flex-1 h-full">
+    <div className="flex md:h-[50vh] bg-muted">
+      <div className="container mx-auto flex flex-col md:flex-row py-20">
+        <div className="flex flex-col justify-center gap-8 flex-1 h-full pb-20 md:p-0">
           <p className="text-2xl font-[600] w-full">
             Підпишіться на наші Telegram канали, <br /> щоб бути в курсі
             актуальних цін та новин ринку

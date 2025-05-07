@@ -18,11 +18,11 @@ const CarsSouthKorea: FC = () => {
     <section className="container mx-auto" id="cars-south-korea">
       <SectionTitle>Імпорт авто з Південної Кореї</SectionTitle>
       <SubTitle>Ми надаємо гарантію до 2 років або 40 тис км.</SubTitle>
-      <div className="flex items-start gap-20">
+      <div className="flex flex-col-reverse md:flex-row items-start gap-20">
         <Accordion
-          type="single"
-          collapsible
+          type="multiple"
           className="w-full flex flex-col gap-8"
+          defaultValue={["pros"]}
         >
           <AccordionItem value="pros">
             <AccordionTrigger className="bg-primary text-white [&>svg]:text-white">
@@ -64,6 +64,7 @@ const CarsSouthKorea: FC = () => {
         <YoutubeVideo
           preview="https://img.youtube.com/vi/IpQqnmb4Uq4/maxresdefault.jpg"
           video="https://www.youtube.com/watch?v=IpQqnmb4Uq4"
+          className="relative md:top-[9rem] md:sticky"
         />
       </div>
     </section>

@@ -35,22 +35,23 @@ const ReviewCard: FC<ReviewCardProps> = ({
         >
           {comment}
         </p>
-        <div className="flex items-center gap-1 text-yellow-500">
+        <div className="flex justify-between items-center gap-1 text-yellow-500">
           {Array.from({ length: stars }).map((_, i) => (
             <Star key={i} size={18} fill="currentColor" />
           ))}
+          <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            Перейти
+          </Link>
         </div>
       </CardContent>
-      <CardFooter className="px-6 pb-6 pt-0 flex justify-between items-center text-sm">
+      <CardFooter className="px-6 pb-6 pt-0 text-sm">
         <span className="font-medium">{user}</span>
-        <Link
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline"
-        >
-          Переглянути
-        </Link>
+
       </CardFooter>
     </Card>
   );

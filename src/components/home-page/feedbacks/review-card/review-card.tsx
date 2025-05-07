@@ -17,9 +17,9 @@ const ReviewCard: FC<ReviewCardProps> = ({
   comment,
   link,
 }) => {
-  // md:col-span-6  lg:col-span-4 xl:col-span-3 
+  // md:col-span-6  lg:col-span-4 xl:col-span-3
   return (
-    <Card className="w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2">
+    <Card className="snap-start w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2 col-span-1 md:col-span-6 lg:col-span-4 xl:col-span-3">
       <CardHeader className="p-0 overflow-hidden rounded-t-2xl">
         <Image
           src={image}
@@ -30,7 +30,12 @@ const ReviewCard: FC<ReviewCardProps> = ({
         />
       </CardHeader>
       <CardContent className="p-6 space-y-4">
-        <p className="text-muted-foreground text-sm line-clamp-5" title={comment}>{comment}</p>
+        <p
+          className="text-muted-foreground text-sm line-clamp-5"
+          title={comment}
+        >
+          {comment}
+        </p>
         <div className="flex items-center gap-1 text-yellow-500">
           {Array.from({ length: stars }).map((_, i) => (
             <Star key={i} size={18} fill="currentColor" />

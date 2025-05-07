@@ -4,7 +4,7 @@ import AppHeader from "./app-header";
 const AppLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div>
-      <AppHeader />
+      {/* <AppHeader /> */}
       {children}
     </div>
 

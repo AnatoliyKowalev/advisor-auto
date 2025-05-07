@@ -18,7 +18,7 @@ const VideoCard: FC<VideoCardProps> = ({ preview, video, title }) => (
         height={200}
         alt={title}
       />
-      <CardContent>
+      <CardContent className="p-0">
         <h3 className="text-lg font-semibold group-hover:text-primary">
           {title}
         </h3>

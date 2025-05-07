@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, Phone, Send, Youtube } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import React, { FC } from "react";
 import { mediaLinks } from "./constants";
 import CustomIcon from "@/components/shared/custom-icon";

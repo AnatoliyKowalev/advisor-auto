@@ -1,5 +1,3 @@
-import { Blocks, Home, Radar } from "lucide-react";
-
 export const mainMenu = [
   {
     title: "Авто з Південної Кореї",

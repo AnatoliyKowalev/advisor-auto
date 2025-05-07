@@ -19,7 +19,9 @@ const AdvisorFamilyCard: FC = () => {
         />
         <div className="md:col-span-6 flex flex-col items-start">
           <SectionTitle>Advisor Family Card</SectionTitle>
-          <p>Advisor Family - сім'я, яка надає безліч можливостей та переваг</p>
+          <p>
+            Advisor Family - сім&apos;я, яка надає безліч можливостей та переваг
+          </p>
           <br />
           <p>
             Advisor Family Card — екосистема, покликана допомогти Вам якісно

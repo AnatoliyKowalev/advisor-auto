@@ -17,9 +17,8 @@ const ReviewCard: FC<ReviewCardProps> = ({
   comment,
   link,
 }) => {
-  // md:col-span-6  lg:col-span-4 xl:col-span-3
   return (
-    <Card className="snap-start w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2 col-span-1 md:col-span-6 lg:col-span-4 xl:col-span-3">
+    <Card className="snap-start w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2 col-span-1 md:col-span-6 lg:col-span-4 xl:col-span-3 h-fit">
       <CardHeader className="p-0 overflow-hidden rounded-t-2xl">
         <Image
           src={image}

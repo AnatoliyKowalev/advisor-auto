@@ -4,7 +4,7 @@ import React, { FC } from "react";
 
 const MainBanner: FC = () => {
   return (
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 h-screen pt-[25vh]">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 h-screen pt-[25vh] overflow-hidden relative">
       <div className="flex flex-col md:col-span-6">
         <span className="text-2xl text-primary font-bold">
           AdvisorAuto - Авто з гарантією
@@ -23,7 +23,7 @@ const MainBanner: FC = () => {
       <div className="flex flex-col md:col-span-6">
         <Image
           src="/img/kia.png"
-          className="md:absolute md:left-1/2 transform md:-translate-x-1/3 md:translate-y-1/5 pointer-events-none"
+          className="absolute scale-220 md:scale-100 bottom-[10vh] md:bottom-[auto] right-[-36%] md:right-[0] md:left-1/2 transform md:-translate-x-1/3 md:translate-y-1/5 pointer-events-none"
           alt="white kia car"
           width={1200}
           height={1000}

@@ -4,6 +4,7 @@ import React, { FC } from "react";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlayCircleIcon } from "lucide-react";
 import Image from "next/image";
+import WelcomeModal from "../welcome-modal";
 
 const MainBanner: FC = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -18,13 +19,7 @@ const MainBanner: FC = () => {
           <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
             Імпорт авто з Південної Кореї та Європи
           </h1>
-          <div
-            className="flex mt-4 items-center justify-center md:justify-start gap-4 cursor-pointer group"
-            role="button"
-          >
-            <PlayCircleIcon className="rounded-full w-12 h-12 text-primary transition-shadow duration-300 group-hover:shadow-[0_0_15px_#a6f4c5]" />
-            <span className="font-[500]">Дізнатись більше</span>
-          </div>
+          <WelcomeModal />
         </div>
         {isDesktop ? (
           <div className="hidden md:block flex flex-col md:col-span-6">

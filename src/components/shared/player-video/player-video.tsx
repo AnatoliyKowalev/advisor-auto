@@ -1,11 +1,11 @@
 import React, { FC, useState } from "react";
 import ReactPlayer from "react-player";
-import { YoutubeVideoProps } from "./interfaces";
+import { PlayerVideoProps } from "./interfaces";
 import CustomIcon from "../custom-icon";
 import { cn } from "@/lib/utils";
 
-const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video, className }) => {
-  const [isActive, setIsActive] = useState(false);
+const PlayerVideo: FC<PlayerVideoProps> = ({ preview, video, className }) => {
+  const [isActive, setIsActive] = useState(!preview);
 
   return (
     <div
@@ -17,6 +17,8 @@ const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video, className }) => {
       {isActive ? (
         <ReactPlayer
           url={video}
+          playing
+          controls
           config={{
             youtube: {
               playerVars: {
@@ -44,4 +46,4 @@ const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video, className }) => {
   );
 };
 
-export default YoutubeVideo;
+export default PlayerVideo;

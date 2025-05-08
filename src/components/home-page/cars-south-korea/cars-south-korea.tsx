@@ -11,7 +11,7 @@ import { Accordion } from "@radix-ui/react-accordion";
 import { Minus, Plus } from "lucide-react";
 import React, { FC } from "react";
 import { cons, pros } from "./constants";
-import YoutubeVideo from "@/components/shared/youtube-video";
+import PlayerVideo from "@/components/shared/player-video";
 
 const CarsSouthKorea: FC = () => {
   return (
@@ -61,7 +61,7 @@ const CarsSouthKorea: FC = () => {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        <YoutubeVideo
+        <PlayerVideo
           preview="/img/maxresdefault.webp"
           video="https://www.youtube.com/watch?v=IpQqnmb4Uq4"
           className="relative md:top-[9rem] md:sticky"

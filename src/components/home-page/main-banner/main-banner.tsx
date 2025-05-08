@@ -2,7 +2,6 @@
 
 import React, { FC } from "react";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { PlayCircleIcon } from "lucide-react";
 import Image from "next/image";
 import WelcomeModal from "../welcome-modal";
 

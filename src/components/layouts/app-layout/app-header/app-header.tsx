@@ -8,6 +8,7 @@ import ContactSubHeader from "../contact-sub-header";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import BurgerMenu from "./burder-menu";
+import ContactModal from "@/components/home-page/contact-modal";
 
 const AppHeader: FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -44,14 +45,16 @@ const AppHeader: FC = () => {
             alt="company logo"
           />
           <NavMain className="hidden lg:block ml-auto" />
-          <Button
-            className="ml-auto mr-2 md:m-none"
-            size="lg"
-            aria-label="Консультація"
-          >
-            <Phone className="block md:hidden" />
-            <span className="hidden md:block">Консультація</span>
-          </Button>
+          <ContactModal>
+            <Button
+              className="ml-auto mr-2 md:m-none"
+              size="lg"
+              aria-label="Консультація"
+            >
+              <Phone className="block md:hidden" />
+              <span className="hidden md:block">Консультація</span>
+            </Button>
+          </ContactModal>
           <BurgerMenu />
         </div>
       </header>

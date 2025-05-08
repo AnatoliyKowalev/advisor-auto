@@ -43,11 +43,11 @@ const TelegramBlock: FC = () => {
             актуальних цін та новин ринку
           </p>
           <div className="flex items-center gap-4 w-full">
-            <Button size="lg">
+            <Button className="flex-1 md:flex-none" size="lg">
               <CustomIcon icon="telegram" />
               Європа
             </Button>
-            <Button size="lg">
+            <Button className="flex-1 md:flex-none" size="lg">
               <CustomIcon icon="telegram" />
               Південна Корея 🇰🇷
             </Button>

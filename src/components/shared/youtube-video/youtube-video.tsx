@@ -21,6 +21,7 @@ const YoutubeVideo: FC<YoutubeVideoProps> = ({ preview, video, className }) => {
             youtube: {
               playerVars: {
                 autoplay: 1,
+                controls: 1,
               },
             },
           }}

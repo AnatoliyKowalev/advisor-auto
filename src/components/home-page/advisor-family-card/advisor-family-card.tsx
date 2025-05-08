@@ -18,7 +18,9 @@ const AdvisorFamilyCard: FC = () => {
           alt="advisor family card"
         />
         <div className="md:col-span-6 flex flex-col items-start">
-          <SectionTitle>Advisor Family Card</SectionTitle>
+          <SectionTitle className="mx-auto md:ml-0">
+            Advisor Family Card
+          </SectionTitle>
           <p>
             Advisor Family - сім&apos;я, яка надає безліч можливостей та переваг
           </p>

@@ -7,8 +7,8 @@ import {
 import Image from "next/image";
 import React, { FC } from "react";
 import { ReviewCardProps } from "./interfaces";
-import { Star } from "lucide-react";
 import Link from "next/link";
+import FeedbackStars from "@/components/shared/feedback-stars";
 
 const ReviewCard: FC<ReviewCardProps> = ({
   image,
@@ -16,9 +16,14 @@ const ReviewCard: FC<ReviewCardProps> = ({
   stars,
   comment,
   link,
+  idx,
+  onClick,
 }) => {
   return (
-    <Card className="snap-start w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2 col-span-1 md:col-span-6 lg:col-span-4 xl:col-span-3 h-fit">
+    <Card
+      className="snap-start w-full max-w-md rounded-2xl shadow-lg transition hover:shadow-xl p-0 gap-2 col-span-1 md:col-span-6 lg:col-span-4 xl:col-span-3 h-fit"
+      onClick={() => onClick(idx)}
+    >
       <CardHeader className="p-0 overflow-hidden rounded-t-2xl">
         <Image
           src={image}
@@ -35,23 +40,18 @@ const ReviewCard: FC<ReviewCardProps> = ({
         >
           {comment}
         </p>
-        <div className="flex justify-between items-center gap-1 text-yellow-500">
-          {Array.from({ length: stars }).map((_, i) => (
-            <Star key={i} size={18} fill="currentColor" />
-          ))}
-          <Link
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            Перейти
-          </Link>
-        </div>
+        <FeedbackStars stars={stars} />
+        <Link
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Перейти
+        </Link>
       </CardContent>
       <CardFooter className="px-6 pb-6 pt-0 text-sm">
         <span className="font-medium">{user}</span>
-
       </CardFooter>
     </Card>
   );

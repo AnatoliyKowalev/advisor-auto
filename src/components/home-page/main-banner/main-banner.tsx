@@ -1,8 +1,13 @@
+"use client";
+
+import React, { FC } from "react";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { PlayCircleIcon } from "lucide-react";
 import Image from "next/image";
-import React, { FC } from "react";
 
 const MainBanner: FC = () => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
     <div className="bg-[url('/svg/baner-overlay.svg')] bg-no-repeat bg-cover">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 h-screen pt-[5vh] overflow-hidden md:overflow-visible relative">
@@ -21,15 +26,17 @@ const MainBanner: FC = () => {
             <span className="font-[500]">Дізнатись більше</span>
           </div>
         </div>
-        <div className="hidden md:block flex flex-col md:col-span-6">
-          <Image
-            src="/img/kia.webp"
-            className="md:absolute md:translate-x-1/5 md:translate-y-1/7 md:bottom-[10vh] object-contain md:left-1/2 transform pointer-events-none"
-            alt="white kia car"
-            fill
-            sizes="(max-width: 1000px) 1200px"
-          />
-        </div>
+        {isDesktop ? (
+          <div className="hidden md:block flex flex-col md:col-span-6">
+            <Image
+              src="/img/kia.webp"
+              className="md:absolute md:translate-x-1/5 md:translate-y-1/7 md:bottom-[10vh] object-contain md:left-1/2 transform pointer-events-none"
+              alt="white kia car"
+              fill
+              sizes="(max-width: 1000px) 1200px"
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   );

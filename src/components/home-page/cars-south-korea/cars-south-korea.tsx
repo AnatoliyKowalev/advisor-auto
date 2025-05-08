@@ -62,7 +62,7 @@ const CarsSouthKorea: FC = () => {
           </AccordionItem>
         </Accordion>
         <YoutubeVideo
-          preview="https://img.youtube.com/vi/IpQqnmb4Uq4/maxresdefault.jpg"
+          preview="/img/maxresdefault.webp"
           video="https://www.youtube.com/watch?v=IpQqnmb4Uq4"
           className="relative md:top-[9rem] md:sticky"
         />

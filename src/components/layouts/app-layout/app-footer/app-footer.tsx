@@ -35,6 +35,7 @@ const AppFooter: FC = () => {
                 target="_blank"
                 rel="nofollow"
                 className="flex hover:opacity-80"
+                aria-label={icon}
                 key={link}
               >
                 <CustomIcon icon={icon} className="text-2xl" />

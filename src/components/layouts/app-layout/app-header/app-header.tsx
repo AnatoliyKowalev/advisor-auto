@@ -44,7 +44,11 @@ const AppHeader: FC = () => {
             alt="company logo"
           />
           <NavMain className="hidden lg:block ml-auto" />
-          <Button className="ml-auto mr-2 md:m-none" size="lg">
+          <Button
+            className="ml-auto mr-2 md:m-none"
+            size="lg"
+            aria-label="Консультація"
+          >
             <Phone className="block md:hidden" />
             <span className="hidden md:block">Консультація</span>
           </Button>

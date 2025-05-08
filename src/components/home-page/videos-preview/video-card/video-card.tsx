@@ -3,7 +3,7 @@ import { VideoCardProps } from "./interfaces";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
-const VideoCard: FC<VideoCardProps> = ({ preview, video, title }) => (
+const VideoCard: FC<VideoCardProps> = ({ preview, video, title, alt }) => (
   <a
     href={video}
     className="md:col-span-4 h-full"
@@ -16,7 +16,7 @@ const VideoCard: FC<VideoCardProps> = ({ preview, video, title }) => (
         className="w-full h-48 object-cover rounded transition-transform duration-300 group-hover:scale-102"
         width={300}
         height={200}
-        alt={title}
+        alt={alt}
       />
       <CardContent className="p-0">
         <h3 className="text-lg font-semibold group-hover:text-primary">

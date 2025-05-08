@@ -33,7 +33,7 @@ const AdvisorFamilyCard: FC = () => {
           </p>
           <div className="logos w-full mt-[3rem] md:mt-[5rem] overflow-hidden whitespace-nowrap relative group">
             <LogosSlide />
-            <LogosSlide aria-hidden />
+            <LogosSlide />
           </div>
         </div>
       </div>

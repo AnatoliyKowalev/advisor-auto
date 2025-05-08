@@ -15,7 +15,7 @@ const BurgerMenu: FC = () => {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="lg:hidden p-2">
+      <SheetTrigger className="lg:hidden p-2" aria-label="Меню">
         <Menu className="w-6 h-6 cursor-pointer" />
       </SheetTrigger>
       <SheetContent side="right" className="z-[100] px-10">

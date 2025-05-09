@@ -10,11 +10,13 @@ import Faq from "@/components/home-page/faq";
 import Feedbacks from "@/components/home-page/feedbacks";
 import AdvisorFamilyCard from "@/components/home-page/advisor-family-card";
 import Team from "@/components/home-page/team";
+import Cars from "@/components/home-page/cars";
 
 const Page: FC = () => {
   return (
     <>
       <MainBanner />
+      <Cars />
       <CarsSouthKorea />
       <ParalaxHyunday />
       <GetFilesBlock />

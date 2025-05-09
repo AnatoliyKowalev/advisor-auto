@@ -1,9 +1,9 @@
 import React, { FC } from "react";
-import { Brand } from "@/types/brands";
+import { TypeBrand } from "@/types/brands";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
-const BrandCard: FC<Brand> = ({
+const BrandCard: FC<TypeBrand> = ({
   src,
   link,
   name,

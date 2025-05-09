@@ -1,4 +1,4 @@
-export type Brand = {
+export type TypeBrand = {
   link: string;
   src: string;
   name: string;

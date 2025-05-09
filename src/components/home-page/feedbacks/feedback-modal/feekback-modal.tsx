@@ -52,7 +52,7 @@ const FeekbackModal: FC<FeekbackModalProps> = ({
         <p className="overflow-y-scroll max-h-[50vh]">{comment}</p>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button className="mt-10" variant="outline">
+            <Button className="mt-10" variant="outline" size='lg'>
               Закрити
             </Button>
           </DrawerClose>

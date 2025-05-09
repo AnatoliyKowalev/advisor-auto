@@ -23,7 +23,7 @@ const GetFilesBlock: FC = () => {
           Якщо вас цікавить обʼєм інформації, який отримує кожен клієнт, що
           замовив перевірку авто нашими експертами, натисніть нижче
         </p>
-        <Button size="lg" asChild>
+        <Button size='lg' asChild>
           <a
             href="/pdf/detalna-instrukcziya-importu-avto-z-pivdennoї-koreї.pdf"
             className="mt-8 button primary"

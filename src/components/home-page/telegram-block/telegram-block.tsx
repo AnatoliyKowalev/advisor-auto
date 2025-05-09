@@ -15,7 +15,7 @@ const TelegramBlock: FC = () => {
         if (!video) return;
 
         if (entry.isIntersecting) {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
         } else {
           video.pause();
         }
@@ -42,12 +42,12 @@ const TelegramBlock: FC = () => {
             Підпишіться на наші Telegram канали, <br /> щоб бути в курсі
             актуальних цін та новин ринку
           </p>
-          <div className="flex items-center gap-4 w-full">
-            <Button className="flex-1 md:flex-none" size="lg">
+          <div className="flex items-center gap-4 w-full flex-wrap">
+            <Button className="flex-1 md:flex-none" size='lg'>
               <CustomIcon icon="telegram" />
               Європа
             </Button>
-            <Button className="flex-1 md:flex-none" size="lg">
+            <Button className="flex-1 md:flex-none" size='lg'>
               <CustomIcon icon="telegram" />
               Південна Корея 🇰🇷
             </Button>

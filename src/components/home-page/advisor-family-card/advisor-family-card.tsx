@@ -37,7 +37,7 @@ const AdvisorFamilyCard: FC = () => {
             <LogosSlide />
             <LogosSlide />
           </div>
-          <Button asChild>
+          <Button size='lg' asChild>
             <Link href="/brands" className="mx-auto mt-10">
               Дивитися всі
             </Link>

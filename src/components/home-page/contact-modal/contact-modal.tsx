@@ -82,7 +82,7 @@ const ContactModal: FC<PropsWithChildren> = ({ children }) => {
                   </FormControl>
                 )}
               />
-              <Button type="submit" disabled={!form.formState.isValid}>
+              <Button type="submit" size='lg' disabled={!form.formState.isValid}>
                 Відправити
               </Button>
             </form>

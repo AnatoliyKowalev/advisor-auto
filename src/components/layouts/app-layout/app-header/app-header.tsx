@@ -51,7 +51,6 @@ const AppHeader: FC = () => {
           <ContactModal>
             <Button
               className="ml-auto mr-2 md:m-none"
-              size="lg"
               aria-label="Консультація"
             >
               <Phone className="block md:hidden" />

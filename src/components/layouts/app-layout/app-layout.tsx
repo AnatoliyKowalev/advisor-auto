@@ -5,6 +5,7 @@ import AppFooter from "./app-footer";
 const AppLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <div className="min-h-[100vh] flex flex-col">
+      <div id="top" />
       <AppHeader />
       {children}
       <AppFooter />

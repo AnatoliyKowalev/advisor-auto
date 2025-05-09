@@ -29,12 +29,14 @@ const ContactModal: FC<PropsWithChildren> = ({ children }) => {
   });
 
   const onSubmit = async (values: ContactFormData) => {
-    const res = await fetch("/api/send-to-telegram", {
+    setSuccess(true);
+    // const res =
+    await fetch("/api/send-to-telegram", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
-    if (res.ok) setSuccess(true);
+    // if (res.ok) setSuccess(true);
   };
 
   return (

@@ -5,6 +5,8 @@ import SectionTitle from "@/components/shared/section-title";
 import Image from "next/image";
 import LogosSlide from "./logos-slide";
 import "./style.css";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const AdvisorFamilyCard: FC = () => {
   return (
@@ -35,6 +37,11 @@ const AdvisorFamilyCard: FC = () => {
             <LogosSlide />
             <LogosSlide />
           </div>
+          <Button asChild>
+            <Link href="/brands" className="mx-auto mt-10">
+              Дивитися всі
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

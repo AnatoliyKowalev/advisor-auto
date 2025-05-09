@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import BurgerMenu from "./burder-menu";
 import ContactModal from "@/components/home-page/contact-modal";
+import Link from "next/link";
 
 const AppHeader: FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -38,12 +39,14 @@ const AppHeader: FC = () => {
         ref={headerRef}
       >
         <div className="container mx-auto flex justify-start md:justify-between py-4 w-full items-center">
-          <Image
-            src="svg/advisor-auto-logo.svg"
-            width={155}
-            height={50}
-            alt="company logo"
-          />
+          <Link href="#top">
+            <Image
+              src="svg/advisor-auto-logo.svg"
+              width={155}
+              height={50}
+              alt="company logo"
+            />
+          </Link>
           <NavMain className="hidden lg:block ml-auto" />
           <ContactModal>
             <Button
@@ -55,6 +58,7 @@ const AppHeader: FC = () => {
               <span className="hidden md:block">Консультація</span>
             </Button>
           </ContactModal>
+
           <BurgerMenu />
         </div>
       </header>

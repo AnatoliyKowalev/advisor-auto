@@ -1,22 +1,22 @@
 export const mainMenu = [
   {
     title: "Авто з Південної Кореї",
-    url: "#cars-south-korea",
+    url: "/#cars-south-korea",
   },
   {
     title: "FAQ",
-    url: "#faq",
+    url: "/#faq",
   },
   {
     title: "Ціни та відгуки",
-    url: "#reviews-cases",
+    url: "/#reviews-cases",
   },
   {
     title: "Advisor Family",
-    url: "#advisor-family",
+    url: "/#advisor-family",
   },
   {
     title: "Про нас",
-    url: "#about",
+    url: "/#about",
   },
 ];

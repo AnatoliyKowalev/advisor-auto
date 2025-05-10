@@ -9,7 +9,7 @@ const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
     <div className="xl:col-span-6 flex flex-col lg:flex-row gap-4">
       <img
         src={firstImage.file.url}
-        className="w-full lg:max-w-[300px] rounded-t lg:rounded-t-none lg:rounded-l"
+        className="w-full lg:max-w-[300px] lg:max-h-[300px] object-contain rounded-t lg:rounded-t-none lg:rounded-l bg-muted"
         alt={firstImage.title}
       />
       <div className="flex flex-col flex-1">

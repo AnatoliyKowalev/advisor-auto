@@ -6,16 +6,6 @@ export const client = createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
 });
 
-// export async function getCars(brand?: string, fuelTypes?: string[]) {
-//   const entries = await client.getEntries({
-//     content_type: "car",
-//     ...(brand && { "fields.brand": brand }),
-//     ...(fuelTypes?.length && { "fields.fuelType[in]": fuelTypes.join(",") }),
-//   });
-
-//   return entries.items as unknown as TypeContentfulCar[];
-// }
-
 export async function getCars(
   brand?: string,
   fuelTypes?: string[],

@@ -50,7 +50,6 @@ export const CarFilterProvider: FC<PropsWithChildren> = ({ children }) => {
 
     await getCars(brand, fuelTypes, isReset ? 1 : page, LOAD_CARS_LIMIT).then(
       (res) => {
-        console.log(res);
         setLoading(false);
 
         setData((prev) => ({

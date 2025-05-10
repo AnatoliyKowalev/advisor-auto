@@ -6,10 +6,10 @@ const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
   const firstImage = fields.album[0].fields;
 
   return (
-    <div className="xl:col-span-6 flex flex-col md:flex-row gap-4">
+    <div className="xl:col-span-6 flex flex-col lg:flex-row gap-4">
       <img
         src={firstImage.file.url}
-        className="w-full md:max-w-[300px] rounded-t lg:rounded-t-none lg:rounded-l"
+        className="w-full lg:max-w-[300px] rounded-t lg:rounded-t-none lg:rounded-l"
         alt={firstImage.title}
       />
       <div className="flex flex-col flex-1">

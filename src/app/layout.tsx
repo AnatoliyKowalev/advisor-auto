@@ -37,6 +37,9 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={`${interSans.variable} text-foreground antialiased light`}
+          style={{
+            overflow: "visible!important",
+          }}
         >
           <AppLayout>{children}</AppLayout>
         </body>

@@ -4,11 +4,11 @@ import React, { FC } from "react";
 
 const CarCardSkeleton: FC = () => {
   return (
-    <div className="flex gap-4">
-      <Skeleton className="w-[300px] min-h-[200px] rounded-l" />
+    <div className="flex flex-col lg:flex-row gap-4">
+      <Skeleton className="w-full lg:max-w-[300px] min-h-[200px] rounded-t lg:rounded-t-none lg:rounded-l" />
       <div className="flex flex-col flex-1">
         <Skeleton className="h-[1.5rem] w-full" />
-        <Skeleton className="mt-2 h-[1rem] w-[80%]" />
+        <Skeleton className="my-2 h-[1rem] w-[80%]" />
         <div className="flex flex-col gap-2 mt-auto text-md">
           <div className="flex items-center gap-3">
             <Fuel size={20} />

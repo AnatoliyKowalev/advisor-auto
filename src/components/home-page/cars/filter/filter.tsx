@@ -16,8 +16,10 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import { EnumBrand } from "@/types/brands";
 import { EnumFuelType } from "@/types/cars";
+import { FilterProps } from "./interfaces";
+import { cn } from "@/lib/utils";
 
-const Filter: FC = () => {
+const Filter: FC<FilterProps> = ({ className }) => {
   const { brand, fuelTypes, setBrand, setFuelTypes } = useCarFilter();
 
   const changeFuelType = debounce((value) => {
@@ -29,13 +31,13 @@ const Filter: FC = () => {
   }, 1000);
 
   return (
-    <div className="flex flex-col md:max-w-[250px]">
+    <div className={cn("flex flex-col md:max-w-[250px]", className)}>
       <Label>Марка авто</Label>
       <Select onValueChange={changeBrand} defaultValue={brand}>
         <SelectTrigger className="w-full md:w-[180px]">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent position="item-aligned">
           <SelectGroup>
             <SelectLabel>Всі маркі</SelectLabel>
             {DEFAULT_BRANDS.map((brand) => (

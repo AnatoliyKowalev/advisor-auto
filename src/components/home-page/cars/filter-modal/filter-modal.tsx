@@ -6,16 +6,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import React from "react";
+import React, { FC } from "react";
 import Filter from "../filter";
 import { Button } from "@/components/ui/button";
 import { SlidersHorizontal } from "lucide-react";
+import Link from "next/link";
 
-const FilterModal = () => {
+const FilterModal: FC = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="sticky h-fit z-1 bottom-[100px] flex justify-center">
+        <div className="sticky mt-4 h-fit z-1 bottom-[5vh] flex justify-center">
           <Button
             className="w-fit bg-red-700 !px-8 gap-4 rounded-[2rem]"
             size="lg"
@@ -33,9 +34,12 @@ const FilterModal = () => {
         </DialogHeader>
         <Filter />
         <DialogClose asChild>
-          <Button className="mt-6" variant="outline" size="lg">
+          <Link
+            href="/#cars"
+            className="mt-6 inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+          >
             Показати
-          </Button>
+          </Link>
         </DialogClose>
       </DialogContent>
     </Dialog>

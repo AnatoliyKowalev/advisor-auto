@@ -17,3 +17,5 @@ export const useMediaQuery = (query: string): boolean => {
 
   return matches;
 };
+
+export const isDesktop = () => useMediaQuery("(min-width: 768px)");

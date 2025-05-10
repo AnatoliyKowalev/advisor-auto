@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { isDesktop } from "@/hooks/use-media-query";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -26,9 +26,9 @@ const FeekbackModal: FC<FeekbackModalProps> = ({
   stars,
   ...rest
 }) => {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const desktop = isDesktop();
 
-  if (isDesktop) {
+  if (desktop) {
     return (
       <Dialog {...rest}>
         <DialogContent className="sm:max-w-[425px]">
@@ -52,7 +52,7 @@ const FeekbackModal: FC<FeekbackModalProps> = ({
         <p className="overflow-y-scroll max-h-[50vh]">{comment}</p>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
-            <Button className="mt-10" variant="outline" size='lg'>
+            <Button className="mt-10" variant="outline" size="lg">
               Закрити
             </Button>
           </DrawerClose>

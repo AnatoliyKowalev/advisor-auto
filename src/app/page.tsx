@@ -16,7 +16,6 @@ const Page: FC = () => {
   return (
     <>
       <MainBanner />
-      <Cars />
       <CarsSouthKorea />
       <ParalaxHyunday />
       <GetFilesBlock />
@@ -25,6 +24,7 @@ const Page: FC = () => {
       <YoutubeSubscribe />
       <Faq />
       <Feedbacks />
+      <Cars />
       <AdvisorFamilyCard />
       <Team />
     </>

@@ -6,3 +6,10 @@ export type TypeBrand = {
   badges?: string[];
   contacts?: string[];
 };
+
+export enum EnumBrand {
+  "KIA" = "KIA",
+  "Hyundai" = "Hyundai",
+  "Tesla" = "Tesla",
+  "Volkswagen" = "Volkswagen"
+}

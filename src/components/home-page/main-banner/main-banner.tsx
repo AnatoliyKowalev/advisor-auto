@@ -1,12 +1,12 @@
 "use client";
 
 import React, { FC } from "react";
-import { useMediaQuery } from "@/hooks/use-media-query";
+import { isDesktop } from "@/hooks/use-media-query";
 import Image from "next/image";
 import WelcomeModal from "../welcome-modal";
 
 const MainBanner: FC = () => {
-  const isDesktop = useMediaQuery("(min-width: 768px)");
+  const desktop = isDesktop();
 
   return (
     <div className="bg-[url('/svg/baner-overlay.svg')] bg-no-repeat bg-cover">
@@ -20,7 +20,7 @@ const MainBanner: FC = () => {
           </h1>
           <WelcomeModal />
         </div>
-        {isDesktop ? (
+        {desktop ? (
           <div className="hidden md:block flex flex-col md:col-span-6">
             <Image
               src="/img/kia.webp"

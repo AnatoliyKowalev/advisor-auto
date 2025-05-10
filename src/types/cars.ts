@@ -8,6 +8,9 @@ export type TypeContentfulCar = {
     points: string[];
     tiktokLink: string;
   };
+  sys: {
+    id: string;
+  };
 };
 
 export type TypeContentfulMedia = {
@@ -18,3 +21,10 @@ export type TypeContentfulMedia = {
     };
   };
 };
+
+export enum EnumFuelType {
+  "gas" = "Газ",
+  "diesel" = "Дизель",
+  "electro" = "Електро",
+  "gasoline" = "Бензин",
+}

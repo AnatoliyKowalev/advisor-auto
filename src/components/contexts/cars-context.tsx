@@ -1,4 +1,3 @@
-// CarFilterContext.tsx
 import { getCars } from "@/lib/contentfulConfig";
 import { EnumBrand } from "@/types/brands";
 import { EnumFuelType, TypeContentfulCar } from "@/types/cars";
@@ -6,13 +5,11 @@ import React, {
   createContext,
   useContext,
   useState,
-  ReactNode,
   FC,
   PropsWithChildren,
   useEffect,
 } from "react";
 import { DEFAULT_STATE, LOAD_CARS_LIMIT } from "./constants";
-import { debounce } from "lodash";
 
 type CarFilterContextType = {
   loading: boolean;

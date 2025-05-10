@@ -1,19 +1,18 @@
 import React, { FC } from "react";
-import { CarCardProps } from "./interfaces";
 import { Fuel } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { TypeContentfulCar } from "@/types/cars";
 
-const CarCard: FC<CarCardProps> = ({ fields, sys }) => {
+const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
   const firstImage = fields.album[0].fields;
 
   return (
-    <div className="flex flex-col md:flex-row gap-4">
+    <div className="xl:col-span-6 flex flex-col md:flex-row gap-4">
       <img
         src={firstImage.file.url}
-        className="w-full md:max-w-[300px] rounded-t md:rounded-l"
+        className="w-full md:max-w-[300px] rounded-t lg:rounded-t-none lg:rounded-l"
         alt={firstImage.title}
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-1">
         <div className="font-bold text-lg">{fields.name}</div>
         <div className="mb-2">{fields.description}</div>
         <div className="flex flex-col gap-2 mt-auto text-md">

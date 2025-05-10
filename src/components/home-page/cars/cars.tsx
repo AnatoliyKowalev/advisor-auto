@@ -1,9 +1,7 @@
 "use client";
 
-import { getCars } from "@/lib/contentfulConfig";
-import { TypeContentfulCar } from "@/types/cars";
 import Image from "next/image";
-import React, { FC, useEffect, useState } from "react";
+import React, { FC } from "react";
 import Filter from "./filter";
 import {
   CarFilterProvider,
@@ -12,25 +10,24 @@ import {
 import { Button } from "@/components/ui/button";
 import CarCard from "./car-card";
 import CarCardSkeleton from "./car-card/car-card-skeleton";
-import { FilterIcon, SlidersHorizontal } from "lucide-react";
 import FilterModal from "./filter-modal";
-import { isDesktop } from "@/hooks/use-media-query";
+import { useScreen } from "@/hooks/use-media-query";
 
 const Cars: FC = () => {
   const { data, loading, loadMore } = useCarFilter();
 
-  const desktop = isDesktop();
+  const isDesktop = useScreen();
 
   return (
-    <div className="container mx-auto flex flex-col md:flex-row py-5 gap-4 relative">
-      {desktop ? (
+    <div className="container mx-auto flex flex-col md:flex-row py-10 gap-0 xl:gap-4 relative">
+      {isDesktop ? (
         <div className="sticky top-[150px] h-fit">
           <Filter />
         </div>
       ) : null}
       <div className="flex flex-col flex-1">
         <div className="flex items-center text-md text-muted-foreground mb-2">{`Кейси імпорту (${data.cars.length}\\${data.total})`}</div>
-        <div className="flex flex-col gap-8">
+        <div className="grid xl:grid-cols-12 gap-8">
           {loading && !data.cars.length ? (
             <>
               <CarCardSkeleton />
@@ -58,14 +55,14 @@ const Cars: FC = () => {
           <Button
             onClick={loadMore}
             disabled={loading}
-            className="mt-6"
+            className="mt-6 mb-4 mx-auto"
             size="lg"
           >
             Завантажити ще
           </Button>
         ) : null}
       </div>
-      {desktop ? null : <FilterModal />}
+      {isDesktop ? null : <FilterModal />}
       {/* <div className="sticky h-fit z-1 bottom-[100px] flex justify-center">
         <Button
           className="w-fit bg-red-700 !px-8 gap-4 rounded-[2rem]"

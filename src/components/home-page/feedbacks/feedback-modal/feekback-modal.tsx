@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { isDesktop } from "@/hooks/use-media-query";
+import { useScreen } from "@/hooks/use-media-query";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -26,9 +26,9 @@ const FeekbackModal: FC<FeekbackModalProps> = ({
   stars,
   ...rest
 }) => {
-  const desktop = isDesktop();
+  const isDesktop = useScreen();
 
-  if (desktop) {
+  if (isDesktop) {
     return (
       <Dialog {...rest}>
         <DialogContent className="sm:max-w-[425px]">

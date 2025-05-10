@@ -1,3 +1,4 @@
+import React, { FC } from "react";
 import { useCarFilter } from "@/components/contexts/cars-context";
 import {
   Select,
@@ -9,14 +10,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-
-import { EnumBrand } from "@/types/brands";
-import { EnumFuelType } from "@/types/cars";
-import React, { FC, useEffect, useMemo, useState } from "react";
 import { BRAND_ICONS, DEFAULT_BRANDS, DEFAULT_FUEL_TYPES } from "./constants";
 import { debounce } from "lodash";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { EnumBrand } from "@/types/brands";
+import { EnumFuelType } from "@/types/cars";
 
 const Filter: FC = () => {
   const { brand, fuelTypes, setBrand, setFuelTypes } = useCarFilter();

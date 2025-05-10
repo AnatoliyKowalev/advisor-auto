@@ -28,3 +28,17 @@ export async function getCars(
     hasMore: skip + limit < entries.total,
   };
 }
+
+export async function getCarById(id: string) {
+  try {
+    // Fetch the car entry by its unique ID
+    const entry = await client.getEntry(id);
+
+    return {
+      car: entry.fields as TypeContentfulCar, // Map the fields to your car type
+    };
+  } catch (error) {
+    console.error("Error fetching car by ID:", error);
+    return null; // Return null if there's an error
+  }
+}

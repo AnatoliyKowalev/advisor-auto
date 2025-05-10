@@ -41,10 +41,11 @@ const AppHeader: FC = () => {
         <div className="container mx-auto flex justify-start md:justify-between py-4 w-full items-center">
           <Link href="#top">
             <Image
-              src="svg/advisor-auto-logo.svg"
+              src="/svg/advisor-auto-logo.svg"
               width={155}
               height={50}
               alt="company logo"
+              priority
             />
           </Link>
           <NavMain className="hidden lg:block ml-auto" />

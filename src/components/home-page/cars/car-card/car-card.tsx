@@ -1,12 +1,18 @@
 import React, { FC } from "react";
 import { Fuel } from "lucide-react";
 import { TypeContentfulCar } from "@/types/cars";
+import Link from "next/link";
 
 const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
   const firstImage = fields.album[0].fields;
 
   return (
-    <div className="xl:col-span-6 flex flex-col lg:flex-row gap-4">
+    <Link
+      href={`/car/${sys.id}`}
+      className="xl:col-span-6 flex flex-col lg:flex-row gap-4"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
         src={firstImage.file.url}
         className="w-full lg:max-w-[300px] lg:max-h-[300px] object-contain rounded-t lg:rounded-t-none lg:rounded-l bg-muted"
@@ -32,7 +38,7 @@ const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

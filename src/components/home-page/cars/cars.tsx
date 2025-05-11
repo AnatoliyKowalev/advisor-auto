@@ -20,8 +20,8 @@ const Cars: FC = () => {
 
   return (
     <>
-      <div id="cars" className="-mt-20 pt-20" />
-      <div className="container mx-auto flex flex-col md:flex-row md:items-start py-10 gap-0 xl:gap-4">
+      <div id="cars" className="-mt-24 pt-24" />
+      <div className="container mx-auto flex flex-col md:flex-row md:items-start py-10 gap-4">
         {isDesktop ? <Filter className="sticky top-[150px]" /> : null}
         <div className="flex flex-col flex-1">
           <div className="flex items-center text-md text-muted-foreground mb-2">{`Кейси імпорту (${data.cars.length}\\${data.total})`}</div>

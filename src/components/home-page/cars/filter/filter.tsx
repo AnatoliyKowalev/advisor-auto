@@ -18,23 +18,26 @@ import { EnumBrand } from "@/types/brands";
 import { EnumFuelType } from "@/types/cars";
 import { FilterProps } from "./interfaces";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { Search } from "lucide-react";
 
-const Filter: FC<FilterProps> = ({ className }) => {
-  const { brand, fuelTypes, setBrand, setFuelTypes } = useCarFilter();
+const Filter: FC<FilterProps> = ({ className, searchBtn }) => {
+  const { brand, fuelTypes, isDirty, setBrand, setFuelTypes, loadMore } =
+    useCarFilter();
 
   const changeFuelType = debounce((value) => {
     setFuelTypes(value as EnumFuelType[]);
-  }, 1500);
+  }, 300);
 
   const changeBrand = debounce((value) => {
     setBrand(value as EnumBrand);
-  }, 1000);
+  }, 300);
 
   return (
     <div className={cn("flex flex-col md:max-w-[250px]", className)}>
       <Label>Марка авто</Label>
       <Select onValueChange={changeBrand} defaultValue={brand}>
-        <SelectTrigger className="w-full md:w-[180px]">
+        <SelectTrigger className="w-full">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>
         <SelectContent position="item-aligned">
@@ -69,6 +72,38 @@ const Filter: FC<FilterProps> = ({ className }) => {
           </ToggleGroupItem>
         ))}
       </ToggleGroup>
+      {isDirty
+        ? (searchBtn ?? (
+            <Link
+              href="#cars"
+              onClick={loadMore}
+              className="mt-6 inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors gap-3"
+            >
+              <Search /> Пошук
+            </Link>
+          ))
+        : null}
+      {/* {isDirty ? (
+        forDialog ? (
+          <DialogClose asChild>
+            <Link
+              href="#cars"
+              onClick={loadMore}
+              className="mt-6 inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors gap-3"
+            >
+              <Search /> Пошук
+            </Link>
+          </DialogClose>
+        ) : (
+          <Link
+            href="#cars"
+            onClick={loadMore}
+            className="mt-6 inline-flex items-center justify-center rounded-md border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-gray-700 hover:border-gray-400 hover:bg-gray-100 hover:text-gray-900 transition-colors gap-3"
+          >
+            <Search /> Пошук
+          </Link>
+        )
+      ) : null} */}
     </div>
   );
 };

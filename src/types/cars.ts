@@ -1,16 +1,18 @@
 export type TypeContentfulCar = {
-  fields: {
-    brand: string;
-    album: TypeContentfulMedia[];
-    description: string;
-    fuelType: string;
-    name: string;
-    points: string[];
-    tiktokLink: string;
-  };
+  fields: TypeCar;
   sys: {
     id: string;
   };
+};
+
+export type TypeCar = {
+  brand: string;
+  album: TypeContentfulMedia[];
+  description: string;
+  fuelType: string;
+  name: string;
+  points: string[];
+  tiktokLink: string;
 };
 
 export type TypeContentfulMedia = {

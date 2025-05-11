@@ -1,4 +1,4 @@
-import { TypeContentfulCar } from "@/types/cars";
+import { TypeCar, TypeContentfulCar } from "@/types/cars";
 import { createClient } from "contentful";
 
 export const client = createClient({
@@ -35,7 +35,7 @@ export async function getCarById(id: string) {
     const entry = await client.getEntry(id);
 
     return {
-      car: entry.fields as TypeContentfulCar, // Map the fields to your car type
+      car: entry.fields as TypeCar,
     };
   } catch (error) {
     console.error("Error fetching car by ID:", error);

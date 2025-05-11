@@ -12,12 +12,13 @@ import React, {
 import { DEFAULT_STATE, LOAD_CARS_LIMIT } from "./constants";
 
 type CarFilterContextType = {
+  data: State;
   loading: boolean;
-  setBrand: (value: EnumBrand) => void;
+  isDirty: boolean;
   brand: EnumBrand;
   fuelTypes: EnumFuelType[];
+  setBrand: (value: EnumBrand) => void;
   setFuelTypes: (value: EnumFuelType[]) => void;
-  data: State;
   loadMore: () => void;
 };
 
@@ -43,12 +44,12 @@ export const CarFilterProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const page = Math.floor(data.cars.length / LOAD_CARS_LIMIT) + 1;
 
+  const isDirty = data.brand !== brand || data.fuelTypes !== fuelTypes;
+
   const loadMore = async () => {
     setLoading(true);
 
-    const isReset = data.brand !== brand || data.fuelTypes !== fuelTypes;
-
-    await getCars(brand, fuelTypes, isReset ? 1 : page, LOAD_CARS_LIMIT).then(
+    await getCars(brand, fuelTypes, isDirty ? 1 : page, LOAD_CARS_LIMIT).then(
       (res) => {
         setLoading(false);
 
@@ -56,29 +57,26 @@ export const CarFilterProvider: FC<PropsWithChildren> = ({ children }) => {
           ...res,
           brand,
           fuelTypes,
-          cars: isReset ? res.cars : [...prev.cars, ...res.cars],
+          cars: isDirty ? res.cars : [...prev.cars, ...res.cars],
         }));
-        // setData(prev => ({
-        //     ...res,
-        //     cars: [...prev.cars, ...res.cars]
-        // }));
       }
     );
   };
 
   useEffect(() => {
     loadMore();
-  }, [brand, fuelTypes]);
+  }, []);
 
   return (
     <CarFilterContext.Provider
       value={{
         loading,
-        loadMore,
+        isDirty,
+        fuelTypes,
         data,
         brand,
         setBrand,
-        fuelTypes,
+        loadMore,
         setFuelTypes,
       }}
     >

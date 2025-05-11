@@ -3,6 +3,7 @@
 import CustomIcon from "@/components/shared/custom-icon";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC, useEffect, useRef } from "react";
 
 const TelegramBlock: FC = () => {
@@ -15,7 +16,7 @@ const TelegramBlock: FC = () => {
         if (!video) return;
 
         if (entry.isIntersecting) {
-          video.play().catch(() => { });
+          video.play().catch(() => {});
         } else {
           video.pause();
         }
@@ -43,13 +44,25 @@ const TelegramBlock: FC = () => {
             актуальних цін та новин ринку
           </p>
           <div className="flex items-center gap-4 w-full flex-wrap">
-            <Button className="flex-1 md:flex-none" size='lg'>
-              <CustomIcon icon="telegram" />
-              Європа
+            <Button className="flex-1 md:flex-none" size="lg" asChild>
+              <Link
+                href="https://t.me/advisorautoelectro"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CustomIcon icon="telegram" />
+                Європа
+              </Link>
             </Button>
-            <Button className="flex-1 md:flex-none" size='lg'>
-              <CustomIcon icon="telegram" />
-              Південна Корея 🇰🇷
+            <Button className="flex-1 md:flex-none" size="lg" asChild>
+              <Link
+                href="https://t.me/advisorautokorea"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <CustomIcon icon="telegram" />
+                Південна Корея 🇰🇷
+              </Link>
             </Button>
           </div>
         </div>

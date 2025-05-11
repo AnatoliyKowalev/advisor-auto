@@ -58,7 +58,6 @@ const AppHeader: FC = () => {
               <span className="hidden md:block">Консультація</span>
             </Button>
           </ContactModal>
-
           <BurgerMenu />
         </div>
       </header>

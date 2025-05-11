@@ -33,6 +33,13 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
           as="style"
         />
+        <link
+          rel="preload"
+          as="image"
+          href="/img/kia.webp"
+          imageSrcSet="/_next/image?url=%2Fimg%2Fkia.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fkia.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fkia.webp&w=1920&q=75 1920w"
+          imageSizes="(max-width: 1000px) 1200px"
+        />
       </Head>
       <html lang="en">
         <body

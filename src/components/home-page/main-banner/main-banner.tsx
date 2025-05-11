@@ -28,6 +28,7 @@ const MainBanner: FC = () => {
               alt="white kia car"
               sizes="(max-width: 1000px) 1200px"
               loading="eager"
+              priority
               fill
             />
           </div>

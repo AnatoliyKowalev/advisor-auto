@@ -36,7 +36,11 @@ const Filter: FC<FilterProps> = ({ className, searchBtn }) => {
   return (
     <div className={cn("flex flex-col md:max-w-[250px]", className)}>
       <Label>Марка авто</Label>
-      <Select onValueChange={changeBrand} defaultValue={brand}>
+      <Select
+        onValueChange={changeBrand}
+        defaultValue={brand}
+        aria-label="Выбрать марку автомобиля"
+      >
         <SelectTrigger className="w-full">
           <SelectValue placeholder="Select a fruit" />
         </SelectTrigger>

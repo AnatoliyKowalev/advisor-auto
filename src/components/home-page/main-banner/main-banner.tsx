@@ -26,8 +26,9 @@ const MainBanner: FC = () => {
               src="/img/kia.webp"
               className="md:absolute md:translate-x-1/5 md:translate-y-1/7 md:bottom-[10vh] object-contain md:left-1/2 transform pointer-events-none"
               alt="white kia car"
-              fill
               sizes="(max-width: 1000px) 1200px"
+              loading="eager"
+              fill
             />
           </div>
         ) : null}

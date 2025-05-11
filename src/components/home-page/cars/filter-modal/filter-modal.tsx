@@ -19,10 +19,18 @@ const FilterModal: FC = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="sticky mt-4 h-fit z-1 bottom-[5vh] flex justify-center">
+        <div
+          className="sticky mt-4 h-fit z-1 bottom-[5vh] flex justify-center"
+          role="button"
+          aria-haspopup="dialog"
+          aria-controls="radix-«Reketb»"
+        >
           <Button
             className="w-fit bg-red-700 !px-8 gap-4 rounded-[2rem]"
             size="lg"
+            aria-label="Фільтр"
+            aria-haspopup="dialog"
+            aria-controls="filter-dialog"
           >
             <SlidersHorizontal className="!w-[1.5rem] !h-[1.5rem]" />
             Фільтр

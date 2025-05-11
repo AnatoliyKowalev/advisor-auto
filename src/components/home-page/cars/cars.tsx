@@ -25,7 +25,7 @@ const Cars: FC = () => {
         {isDesktop ? <Filter className="sticky top-[150px]" /> : null}
         <div className="flex flex-col flex-1">
           <div className="flex items-center text-md text-muted-foreground mb-2">{`Кейси імпорту (${data.cars.length}\\${data.total})`}</div>
-          <div className="grid xl:grid-cols-12 gap-8 mb-4">
+          <div className="grid 2xl:grid-cols-12 gap-8 mb-4">
             {loading && !data.cars.length ? (
               <>
                 <CarCardSkeleton />

@@ -4,8 +4,8 @@ import React, { FC } from "react";
 
 const CarCardSkeleton: FC = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4">
-      <Skeleton className="w-full lg:max-w-[300px] lg:max-h-[300px] min-h-[200px] rounded-t lg:rounded-t-none lg:rounded-l" />
+    <div className="flex flex-col lg:flex-row xl:col-span-6 gap-4">
+      <Skeleton className="w-full lg:max-w-[300px] lg:max-h-[300px] min-h-[200px]" />
       <div className="flex flex-col flex-1">
         <Skeleton className="h-[1.5rem] w-full" />
         <Skeleton className="my-2 h-[1rem] w-[80%]" />

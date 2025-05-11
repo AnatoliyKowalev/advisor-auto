@@ -10,6 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import CarPreviewSkeleton from "../car-preview/car-preview-skeleton";
 
 const CarPreview = lazy(
   () => import("@/components/home-page/cars/car-preview")
@@ -57,7 +58,7 @@ const CarCard: FC<TypeContentfulCar> = (car) => {
         <DialogHeader className="hidden">
           <DialogTitle>Огляд</DialogTitle>
         </DialogHeader>
-        <Suspense fallback="LOADING">
+        <Suspense fallback={<CarPreviewSkeleton />}>
           <CarPreview {...car} />
         </Suspense>
         <DialogClose asChild>

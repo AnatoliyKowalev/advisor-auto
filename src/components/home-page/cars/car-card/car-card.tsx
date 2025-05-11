@@ -16,6 +16,9 @@ const CarCard: FC<TypeContentfulCar> = ({ fields, sys }) => {
       <img
         src={firstImage.file.url}
         className="w-full lg:max-w-[300px] lg:max-h-[300px] object-contain rounded-t lg:rounded-t-none lg:rounded-l bg-muted"
+        width={300}
+        height={300}
+        loading="lazy"
         alt={firstImage.title}
       />
       <div className="flex flex-col flex-1">

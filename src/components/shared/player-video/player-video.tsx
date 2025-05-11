@@ -34,6 +34,7 @@ const PlayerVideo: FC<PlayerVideoProps> = ({ preview, video, className }) => {
             className="absolute inset-0 w-full h-full cursor-pointer"
             onClick={() => setIsActive(true)}
             src={preview}
+            loading="lazy"
             alt="youtube video"
           />
           <CustomIcon

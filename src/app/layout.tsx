@@ -15,9 +15,24 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AdvisorAuto - Імпорт авто з Південної Кореї та Європи",
-  description:
-    "AdvisorAuto - компанія, що займається імпортом автомобілів з Південної Кореї та Норвегії. Рейтинг ⭐⭐⭐⭐⭐ 4.9 у Google на основі 284 відгуків",
+  title: process.env.NEXT_PUBLIC_SITE_TITLE!,
+  description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION!,
+  openGraph: {
+    title: process.env.NEXT_PUBLIC_SITE_TITLE!,
+    description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION!,
+    url: process.env.NEXT_PUBLIC_SITE_URL!,
+    siteName: "AdvisorAuto",
+    images: [
+      {
+        url: "/img/site-logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "AdvisorAuto logo",
+      },
+    ],
+    locale: "uk_UA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

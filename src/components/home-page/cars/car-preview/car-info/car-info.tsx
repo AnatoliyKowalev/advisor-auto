@@ -13,7 +13,7 @@ const CarInfo: FC<TypeContentfulCar> = ({ fields, sys }) => {
         <Fuel size={20} />
         {fuelType}
       </div>
-      <div className="flex gap-4 flex-wrap">
+      <div className="flex flex-col md:flex-row gap-4 flex-wrap">
         {points?.map((point, idx) => (
           <div
             className="flex items-center gap-2"

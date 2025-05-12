@@ -20,7 +20,7 @@ const Cars: FC = () => {
   const isDesktop = useScreen();
 
   return (
-    <div className="container mx-auto grid md:grid-cols-12 py-10 gap-8">
+    <div className="grid md:grid-cols-12 pb-10 gap-8">
       <div className="md:col-span-2">
         {isDesktop ? <Filter className="sticky top-[150px]" /> : null}
       </div>

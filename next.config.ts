@@ -6,17 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.ctfassets.net",
+        pathname: "/**",
       },
     ],
   },
-  // turbopack: {
-  //   rules: {
-  //     "*.svg": {
-  //       loaders: ["@svgr/webpack"],
-  //       as: "*.js",
-  //     },
-  //   },
-  // },
 };
 
 export default nextConfig;

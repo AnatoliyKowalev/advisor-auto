@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { FC } from "react";
-import Filter from "./filter";
+import React, { FC, lazy } from "react";
 import {
   CarFilterProvider,
   useCarFilter,
@@ -10,8 +9,10 @@ import {
 import { Button } from "@/components/ui/button";
 import CarCard from "./car-card";
 import CarCardSkeleton from "./car-card/car-card-skeleton";
-import FilterModal from "./filter-modal";
 import { useScreen } from "@/hooks/use-media-query";
+
+const FilterModal = lazy(() => import("./filter-modal"));
+const Filter = lazy(() => import("./filter"));
 
 const Cars: FC = () => {
   const { data, loading, loadMore } = useCarFilter();

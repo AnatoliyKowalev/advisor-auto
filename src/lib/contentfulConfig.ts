@@ -1,10 +1,5 @@
 import { TypeCar, TypeContentfulCar } from "@/types/cars";
-import { createClient } from "contentful";
-
-export const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
-});
+import { getClient } from "./client";
 
 export async function getCars(
   brand?: string,
@@ -12,6 +7,8 @@ export async function getCars(
   page: number = 1,
   limit: number = 3
 ) {
+  const client = getClient();
+
   const skip = (page - 1) * limit;
 
   const entries = await client.getEntries({
@@ -31,6 +28,7 @@ export async function getCars(
 
 export async function getCarById(id: string) {
   try {
+    const client = getClient();
     // Fetch the car entry by its unique ID
     const entry = await client.getEntry(id);
 

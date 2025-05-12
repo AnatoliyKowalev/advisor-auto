@@ -1,18 +1,31 @@
+"use client";
+
+import React, { FC } from "react";
+import dynamic from "next/dynamic";
 import MainBanner from "@/components/home-page/main-banner";
 import CarsSouthKorea from "@/components/home-page/cars-south-korea";
-import React, { FC } from "react";
 import GetFilesBlock from "@/components/home-page/get-files-block";
 import ParalaxHyunday from "@/components/home-page/paralax-hyunday";
 import VideosPreview from "@/components/home-page/videos-preview";
 import TelegramBlock from "@/components/home-page/telegram-block";
 import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
 import Faq from "@/components/home-page/faq";
-import Feedbacks from "@/components/home-page/feedbacks";
-import AdvisorFamilyCard from "@/components/home-page/advisor-family-card";
 import Team from "@/components/home-page/team";
-import Cars from "@/components/home-page/cars";
 
-const Page: FC = () => {
+const AdvisorFamilyCard = dynamic(
+  () => import("@/components/home-page/advisor-family-card"),
+  {
+    ssr: false,
+  }
+);
+const Feedbacks = dynamic(() => import("@/components/home-page/feedbacks"), {
+  ssr: false,
+});
+const Cars = dynamic(() => import("@/components/home-page/cars"), {
+  ssr: false,
+});
+
+const HomePage: FC = () => {
   return (
     <>
       <MainBanner />
@@ -31,4 +44,4 @@ const Page: FC = () => {
   );
 };
 
-export default Page;
+export default HomePage;

@@ -1,7 +1,4 @@
-"use client";
-
 import React, { FC } from "react";
-import dynamic from "next/dynamic";
 import MainBanner from "@/components/home-page/main-banner";
 import CarsSouthKorea from "@/components/home-page/cars-south-korea";
 import GetFilesBlock from "@/components/home-page/get-files-block";
@@ -11,19 +8,22 @@ import TelegramBlock from "@/components/home-page/telegram-block";
 import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
 import Faq from "@/components/home-page/faq";
 import Team from "@/components/home-page/team";
+import Feedbacks from "@/components/home-page/feedbacks";
+import Cars from "@/components/home-page/cars";
+import AdvisorFamilyCard from "@/components/home-page/advisor-family-card";
 
-const AdvisorFamilyCard = dynamic(
-  () => import("@/components/home-page/advisor-family-card"),
-  {
-    ssr: false,
-  }
-);
-const Feedbacks = dynamic(() => import("@/components/home-page/feedbacks"), {
-  ssr: false,
-});
-const Cars = dynamic(() => import("@/components/home-page/cars"), {
-  ssr: false,
-});
+// const AdvisorFamilyCard = dynamic(
+//   () => import("@/components/home-page/advisor-family-card"),
+//   {
+//     ssr: false,
+//   }
+// );
+// const Feedbacks = dynamic(() => import("@/components/home-page/feedbacks"), {
+//   ssr: false,
+// });
+// const Cars = dynamic(() => import("@/components/home-page/cars"), {
+//   ssr: false,
+// });
 
 const HomePage: FC = () => {
   return (

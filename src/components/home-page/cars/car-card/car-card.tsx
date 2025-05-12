@@ -24,7 +24,7 @@ const CarCard: FC<TypeContentfulCar> = (car) => {
     <Dialog>
       <DialogTrigger asChild>
         <div
-          className="xl:col-span-6 flex flex-col lg:flex-row gap-4"
+          className="xl:col-span-6 flex flex-col lg:flex-row gap-4 cursor-pointer hover:bg-muted transition"
           role="button"
           aria-label="Відкрити перегляд авто"
         >
@@ -36,7 +36,7 @@ const CarCard: FC<TypeContentfulCar> = (car) => {
             loading="lazy"
             alt={firstImage.title}
           />
-          <div className="flex flex-col flex-1">
+          <div className="flex flex-col flex-1 pb-2">
             <div className="font-bold text-lg">{name}</div>
             <div className="mb-2">{description}</div>
             <div className="flex flex-col gap-2 mt-auto text-md">

@@ -40,7 +40,7 @@ export const CarFilterProvider: FC<PropsWithChildren> = ({ children }) => {
     DEFAULT_STATE.fuelTypes
   );
   const [data, setData] = useState<State>(DEFAULT_STATE);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const page = Math.floor(data.cars.length / LOAD_CARS_LIMIT) + 1;
 
@@ -51,14 +51,13 @@ export const CarFilterProvider: FC<PropsWithChildren> = ({ children }) => {
 
     await getCars(brand, fuelTypes, isDirty ? 1 : page, LOAD_CARS_LIMIT).then(
       (res) => {
-        setLoading(false);
-
         setData((prev) => ({
           ...res,
           brand,
           fuelTypes,
           cars: isDirty ? res.cars : [...prev.cars, ...res.cars],
         }));
+        setLoading(false);
       }
     );
   };

@@ -5,8 +5,8 @@ import React, { FC } from "react";
 const CarCardSkeleton: FC = () => {
   return (
     <div className="flex flex-col lg:flex-row xl:col-span-6 gap-4">
-      <Skeleton className="w-full lg:max-w-[300px] lg:max-h-[300px] min-h-[200px]" />
-      <div className="flex flex-col flex-1">
+      <Skeleton className="w-full lg:max-w-[300px] lg:max-h-[300px] min-h-[200px] md:min-h-[300px]" />
+      <div className="flex flex-col flex-1 pb-2">
         <Skeleton className="h-[1.5rem] w-full" />
         <Skeleton className="my-2 h-[1rem] w-[80%]" />
         <div className="flex flex-col gap-2 mt-auto text-md">
@@ -15,10 +15,10 @@ const CarCardSkeleton: FC = () => {
             <Skeleton className="h-[1rem] w-[30%]" />
           </div>
           <div className="flex flex-col">
-            {["", ""].slice(0, 3).map((point, idx) => (
+            {[1, 2, 3].slice(0, 3).map((point) => (
               <div
                 className="flex items-center gap-3"
-                key={`point-preview-${idx}`}
+                key={`point-preview-${point}`}
               >
                 <span>✅</span> <Skeleton className="h-[1rem] w-[50%]" />
               </div>

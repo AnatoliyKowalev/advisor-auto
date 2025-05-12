@@ -8,8 +8,6 @@ import TelegramBlock from "@/components/home-page/telegram-block";
 import YoutubeSubscribe from "@/components/home-page/youtube-subscribe";
 import Faq from "@/components/home-page/faq";
 import Team from "@/components/home-page/team";
-import Feedbacks from "@/components/home-page/feedbacks";
-import Cars from "@/components/home-page/cars";
 import AdvisorFamilyCard from "@/components/home-page/advisor-family-card";
 
 // const AdvisorFamilyCard = dynamic(
@@ -36,8 +34,6 @@ const HomePage: FC = () => {
       <VideosPreview />
       <YoutubeSubscribe />
       <Faq />
-      <Feedbacks />
-      <Cars />
       <AdvisorFamilyCard />
       <Team />
     </>

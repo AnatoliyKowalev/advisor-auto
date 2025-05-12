@@ -16,7 +16,7 @@ const Feedbacks: FC = () => {
 
   return (
     <>
-      <section className="container mx-auto" id="reviews-cases">
+      <section className="container mx-auto">
         <SectionTitle>Відгуки клієнтів та кейси імпорту</SectionTitle>
         <SubTitle>300+ реальних відгуків</SubTitle>
         <div className="grid gap-4 overflow-x-auto sm:grid-cols-4 grid-flow-col auto-cols-[minmax(90%,_1fr)] md:auto-cols-auto md:grid-flow-row md:overflow-x-visible md:grid-cols-12 snap-x snap-mandatory scroll-smooth p-6">

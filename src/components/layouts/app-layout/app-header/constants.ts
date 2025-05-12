@@ -9,7 +9,7 @@ export const mainMenu = [
   },
   {
     title: "Ціни та відгуки",
-    url: "/#reviews-cases",
+    url: "/prices-feedbacks",
   },
   {
     title: "Advisor Family",

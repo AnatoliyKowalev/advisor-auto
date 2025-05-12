@@ -20,7 +20,7 @@ const FilterModal: FC = () => {
     <Dialog>
       <DialogTrigger asChild>
         <div
-          className="sticky mt-4 h-fit z-1 bottom-[5vh] flex justify-center"
+          className="sticky mt-4 h-fit z-1 bottom-[5vh] flex justify-center block md:hidden"
           role="button"
           aria-haspopup="dialog"
           aria-controls="radix-«Reketb»"

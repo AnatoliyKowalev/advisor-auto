@@ -34,7 +34,10 @@ const AlbumCarousel: FC<TypeContentfulCar> = ({ fields }) => {
 
   return (
     <>
-      <Carousel setApi={setApi}>
+      <Carousel
+        setApi={setApi}
+        className="[&>.overflow-hidden]:z-[0] [&>.overflow-hidden]:relative"
+      >
         <CarouselContent className="relative">
           {album.map((photo, idx) => {
             const src = photo.fields.file.url;
@@ -56,7 +59,7 @@ const AlbumCarousel: FC<TypeContentfulCar> = ({ fields }) => {
         <CarouselPrevious className="hidden md:flex" />
         <CarouselNext className="hidden md:flex" />
       </Carousel>
-      <div className="py-2 text-center text-sm text-white bg-black/50 absolute top-2 left-2 md:top-[3%] md:left-[8%] px-3 flex items-center gap-2">
+      <div className="py-2 text-center text-sm text-white absolute bg-black/50 top-2 left-2 md:top-[3%] md:left-[8%] px-3 flex items-center gap-2">
         <Images size={16} /> {current} з {count}
       </div>
       <div className="flex gap-2 mt-2 overflow-x-scroll w-full">

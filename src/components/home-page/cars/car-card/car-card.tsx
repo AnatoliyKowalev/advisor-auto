@@ -23,7 +23,11 @@ const CarCard: FC<TypeContentfulCar> = (car) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="xl:col-span-6 flex flex-col lg:flex-row gap-4">
+        <div
+          className="xl:col-span-6 flex flex-col lg:flex-row gap-4"
+          role="button"
+          aria-label="Відкрити перегляд авто"
+        >
           <img
             src={firstImage.file.url}
             className="w-full lg:max-w-[300px] lg:max-h-[300px] object-contain rounded-t lg:rounded-t-none lg:rounded-l bg-muted"
@@ -71,7 +75,7 @@ const CarCard: FC<TypeContentfulCar> = (car) => {
         </DialogClose>
         <DialogClose asChild>
           <Button
-            className="md:hidden md:container md:mx-auto mt-auto mx-4 mb-6"
+            className="md:hidden md:container md:mx-auto mt-auto mx-4 mb-20"
             variant="outline"
           >
             Закрити

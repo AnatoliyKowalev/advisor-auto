@@ -12,7 +12,6 @@ const PricesFeedbacksPage: FC = () => {
           { name: "Ціни та відгуки", href: "/prices-feedbacks" },
         ]}
       />
-      <div id="cars" className="-mt-24 pt-24" />
       <Cars />
       <Feedbacks />
     </>

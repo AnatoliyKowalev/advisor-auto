@@ -11,11 +11,11 @@ const MainBanner: FC = () => {
   return (
     <div className="bg-[url('/svg/baner-overlay.svg')] bg-no-repeat bg-cover">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 h-screen pt-[5vh] overflow-hidden md:overflow-visible relative">
-        <div className="py-[18vh] flex text-center md:text-left flex-col md:col-span-6 gap-10">
+        <div className="py-[20vh] md:py-[18vh] flex text-center md:text-left flex-col md:col-span-6 gap-10">
           <span className="text-2xl text-primary font-bold">
             AdvisorAuto - Авто з гарантією
           </span>
-          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold md:font-bold">
             Імпорт авто з Південної Кореї та Європи
           </h1>
           <WelcomeModal />

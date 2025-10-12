@@ -38,18 +38,18 @@ const Cars: FC = () => {
               return <CarCard {...car} key={car.sys.id + idx} />;
             })
           )}
-          {!loading && !data.cars.length ? (
-            <div className="md:w-[60%] mx-auto filter grayscale flex flex-col items-center gap-10 py-6">
-              <Image
-                src="/svg/not-found.svg"
-                width={800}
-                height={700}
-                alt="порожній список"
-              />
-              <div className="text-xl md:text-lg">Жодних варіантів</div>
-            </div>
-          ) : null}
         </div>
+        {!loading && !data.cars.length ? (
+          <div className="md:w-[60%] mx-auto filter grayscale flex flex-col items-center gap-10 py-6">
+            <Image
+              src="/svg/not-found.svg"
+              width={800}
+              height={700}
+              alt="порожній список"
+            />
+            <div className="text-xl md:text-lg">Жодних варіантів</div>
+          </div>
+        ) : null}
         {data.hasMore ? (
           <Button
             onClick={loadMore}
